@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAJA777</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000000, #222222);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: gold;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 40px 30px;
+      border: 3px solid gold;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 15px gold;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px black;
+    }
+    .button {
+      display: block;
+      background: black;
+      border: 2px solid gold;
+      color: gold;
+      padding: 15px 30px;
+      border-radius: 30px;
+      margin: 15px 0;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: 0.3s;
+      width: 100%;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: gold;
+      color: black;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: gold;
+      min-height: 1.5em;
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SELAMAT DATANG KE RAJA777</h1>
+    <a class="button" href="https://wa.me/601167908041" target="_blank">Hubungi Kami 24 Jam (WhatsApp)</a>
+    <a class="button" href="https://t.me/Raja777Malaysia" target="_blank">Hubungi Kami 24 Jam (Telegram)</a>
+    <a class="button" href="#" onclick="alert('Halaman Facebook sedang dalam penyediaan.')">Halaman Facebook (Akan Datang)</a>
+
+    <a class="button" href="#" id="luckyDrawBtn">Cabutan Bertuah 🎉</a>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('luckyDrawBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const maxPrize = 888;
+      const loseProbability = 0.65; // 65% peluang tidak menang
+
+      if (Math.random() < loseProbability) {
+        document.getElementById('result').textContent = 'Maaf, anda tidak menang! Hadiah tertinggi adalah RM ' + maxPrize + '. Cuba lagi ya!';
+      } else {
+        const prize = Math.floor(Math.random() * 6) + 5; // nombor rawak 5~10
+        document.getElementById('result').textContent = 'Tahniah! Anda menang RM ' + prize + ' hadiah bertuah! 🎉 Hadiah tertinggi adalah RM ' + maxPrize + '. Semoga berjaya!';
+      }
+    });
+  </script>
+</body>
+</html>
